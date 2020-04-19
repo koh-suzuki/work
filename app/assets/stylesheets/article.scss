@@ -1,0 +1,39 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #e9ecef;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.content-with {
+  border: 1px darkgray solid;
+  margin-top: 5%;
+}
+
+.content-with a {
+  color: #1d2124;
+}
+
+.content-with a:hover {
+  color: silver;
+}
+
+
+/* show */ 
+
+.img-size {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+

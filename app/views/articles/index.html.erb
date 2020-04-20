@@ -3,7 +3,7 @@
     <% @articles.each do |article| %>
       <div class="col-md-3 border mg-top">
       <%= link_to article_path(article.id) do %>
-        <div class="content">
+        <div class="content article-hover">
           <%= image_tag "/flower.jpg", class: "img-fluid" %>
           <div class="text-color">
             <p class="title"><%= article.title %></p>

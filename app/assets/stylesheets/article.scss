@@ -28,22 +28,13 @@ body {
   color: black;  
 }
 
-.text-color a {
-  color: #1d2124;
+.col-md-3.border.mg-top a:hover{
+  text-decoration: none;
 }
 
-.mg-top a:hover {
-  color: silver;
+.content:hover{
+  opacity: 0.5;
 }
-
-.navbar-default {
- background-color: #343a4045; 
-}
-
-a.navbar-brand.text-color:hover {
-  color: black;
-}
-
 
 /* show */ 
 

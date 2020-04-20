@@ -8,8 +8,6 @@
           <div class="text-color">
             <p class="title"><%= article.title %></p>
             <span><%= l article.created_at, format: :medium %></span> 
-            <span><%= link_to "編集", edit_article_path(article) %></span>
-            <span class="text-left"><%= link_to "削除", article_path(article), method: :delete, data: {confirm: "削除しますか？"} %></span>
           </div>
         </div>
       <% end %>

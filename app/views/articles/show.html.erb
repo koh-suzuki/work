@@ -4,10 +4,12 @@
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
         <h2><%= @article.title %></h2>
-        <p><%= @article.content %></p>
+        <%= simple_format @article.content %>
+        <span><%= link_to "編集", edit_article_path(@article), class: "btn btn-success btn-md", style: 'margin-bottom: 5px' %></span>
+        <span><%= link_to "削除", article_path(@article), class: "btn btn-danger", style: 'margin-bottom: 5px', method: :delete, data: {confirm: "削除しますか？"} %></span>
         <p class="text-right"><%= l @article.created_at, format: :medium %></p>
       </div>
-      <span><%= link_to "編集", edit_article_path(@article), class: "btn btn-primary btn-md", style: 'margin-bottom: 5px' %></span>
+      
     </div>
   </div>
 </div>

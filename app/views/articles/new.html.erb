@@ -1,20 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12"><h2 class="text-center">新規作成ページ</h2></div>
-    <div class="col-md-12 content-with">
+    <div class="col-md-12 mg-top">
+      <h2 class="text-center">ブログの新規作成</h2>
+    </div>
+    <div class="col-md-12 border mg-top">
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
-        <%= form_with model: @article do |f| %>
-          <div class="form-group">
-            <%= f.label :title %>
-            <%= f.text_field :title, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :content %>
-            <%= f.text_area :content, cols: "30", rows: "20", class: "form-control" %>
-          </div>
-          <%= f.submit "新規作成", class: "btn btn-primary btn-block" %>
-        <% end %>
+        <%= render "form", article: @article %>
       </div>
     </div>
   </div>

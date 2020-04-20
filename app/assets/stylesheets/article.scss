@@ -4,6 +4,7 @@
 
 body {
   background-color: #e9ecef;
+  padding-top: 60px; 
 }
 
 .title {
@@ -15,17 +16,32 @@ body {
   padding-bottom: 15px;
 }
 
-.content-with {
+.border {
   border: 1px darkgray solid;
-  margin-top: 5%;
 }
 
-.content-with a {
+.mg-top {
+  margin-top: 5%; 
+}
+
+.text-color {
+  color: black;  
+}
+
+.text-color a {
   color: #1d2124;
 }
 
-.content-with a:hover {
+.mg-top a:hover {
   color: silver;
+}
+
+.navbar-default {
+ background-color: #343a4045; 
+}
+
+a.navbar-brand.text-color:hover {
+  color: black;
 }
 
 
@@ -36,4 +52,3 @@ body {
   height: 350px;
   object-fit: cover;
 }
-

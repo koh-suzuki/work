@@ -1,2 +1,13 @@
-<h1>Index#edit</h1>
-<p>Find me in app/views/index/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mg-top">
+      <h2 class="text-center">ブログの編集</h2>
+    </div>
+    <div class="col-md-12 border mg-top">
+      <div class="content">
+        <%= image_tag "/flower.jpg", class: "img-size" %>
+        <%= render "form", article: @article %>
+      </div>
+    </div>
+  </div>
+</div>

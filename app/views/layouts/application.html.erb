@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=ja>
   <head>
     <title>BlogApp</title>
     <%= csrf_meta_tags %>
@@ -15,6 +15,15 @@
   </head>
 
   <body>
+    <div class='fixed-top'>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand text-color" href="/">Koh'sブログ</a>
+          </div>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

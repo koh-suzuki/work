@@ -3,9 +3,9 @@
     <div class="col-md-12 content-with">
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
-        <h2 class="text-center"><%= @article.title %></h2>
+        <h2><%= @article.title %></h2>
         <p><%= @article.content %></p>
-        <span><%= l @article.created_at, format: :medium %></span>  
+        <p class="text-right"><%= l @article.created_at, format: :medium %></p>
       </div>
     </div>
   </div>

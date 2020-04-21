@@ -7,8 +7,19 @@
     <div class="col-md-12 border mg-top">
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
-        <%= render "form", article: @article %>
+        <%= form_with model: @article do |f| %>
+          <div class="form-group form-top">
+            <%= f.label :title, class: "form-margin" %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :content, class: "form-margin" %>
+            <%= f.text_area :content, cols: "30", rows: "20", class: "form-control" %>
+          </div>
+          <%= f.submit yield(:submit), class: "btn btn-primary btn-block" %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+         <!--render "form", article: @article -->

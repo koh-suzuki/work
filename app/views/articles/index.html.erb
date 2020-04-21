@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <%= will_paginate %>
     <% @articles.each do |article| %>
       <div class="col-md-3 border mg-top">
       <%= link_to article_path(article.id) do %>
@@ -14,4 +15,5 @@
       </div>
     <% end %>
   </div>
+  <%= will_paginate %>
 </div>

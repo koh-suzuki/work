@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :destroy, :update]
   def index
-    @articles = Article.order(created_at: :desc)
+    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
   end
   
   def show
@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(params_article)
+    logger.debug @article.errors.inspect
     if @article.save
       redirect_to articles_path, notice: "新規作成できました。"
     else
@@ -21,6 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    
   end
   
   def update

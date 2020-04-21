@@ -13,7 +13,6 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(params_article)
-    logger.debug @article.errors.inspect
     if @article.save
       redirect_to articles_path, notice: "新規作成できました。"
     else

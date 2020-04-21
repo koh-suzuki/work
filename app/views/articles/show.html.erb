@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12 border mg-top">
+    <div class="col-md-12 border mg-top bg-white">
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
-        <h2><%= @article.title %></h2>
+        <h2 class="mt-4"><%= @article.title %></h2>
         <%= simple_format @article.content, class: "padding-18" %>
         <span><%= link_to "編集", edit_article_path(@article), class: "btn btn-success btn-md", style: 'margin-bottom: 5px' %></span>
         <span><%= link_to "削除", article_path(@article), class: "btn btn-danger", style: 'margin-bottom: 5px', method: :delete, data: {confirm: "削除しますか？"} %></span>

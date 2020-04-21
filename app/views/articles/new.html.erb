@@ -1,25 +1,12 @@
 <% provide :submit, '新規作成' %>
 <div class="container">
   <div class="row">
-    <div class="col-md-12 mg-top">
-      <h2 class="text-center">ブログの新規作成</h2>
-    </div>
-    <div class="col-md-12 border mg-top">
+    <div class="col-md-12 border mg-top bg-white">
+      <h2 class="text-center mt-4">ブログの新規作成</h2>
       <div class="content">
         <%= image_tag "/flower.jpg", class: "img-size" %>
-        <%= form_with model: @article do |f| %>
-          <div class="form-group form-top">
-            <%= f.label :title, class: "form-margin" %>
-            <%= f.text_field :title, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :content, class: "form-margin" %>
-            <%= f.text_area :content, cols: "30", rows: "20", class: "form-control" %>
-          </div>
-          <%= f.submit yield(:submit), class: "btn btn-primary btn-block" %>
-        <% end %>
+        <%= render "form", article: @article %>
       </div>
     </div>
   </div>
 </div>
-         <!--render "form", article: @article -->

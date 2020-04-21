@@ -3,4 +3,4 @@ ja:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
       short: "%m/%d %H:%M"
-      medium: "%m月%d日 %H:%M" 
+      medium: "%Y年%m月%d日 %H:%M" 

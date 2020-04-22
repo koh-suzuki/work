@@ -15,13 +15,14 @@
   <body>
     <div class='fixed-top'>
 
-      <%= render "layouts/header" %>
+      <%= render "shared/header" %>
       
     </div>
     
     <!-- 新規作成やログインのメッセージ表示 -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/flash_messages" %>
+    <!--<p class="notice"><% notice %></p>-->
+    <!--<p class="alert"><% alert %></p>-->
     
     <%= yield %>
   </body>

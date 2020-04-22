@@ -13,9 +13,26 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+// ログイン画面
+
+.container-login {
+  @extend .container;
+  max-width: 576px;
+  padding: 2rem;
+}
+
+// 「ログインしました」などのフラッシュ用スタイル
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
 
 body {
-  background-color: #e9ecef;
+  background-color: #f2f8ff;
   padding-top: 60px; 
 }
 

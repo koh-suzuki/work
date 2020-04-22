@@ -1,11 +1,11 @@
 <%= form_with model: article do |f| %>
   <div class="form-group form-top">
-    <%= f.label :title, class: "form-margin" %>
+    <%= f.label :title, "タイトル", class: "form-margin" %>
     <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :content, class: "form-margin" %>
+    <%= f.label :content, "内容", class: "form-margin" %>
     <%= f.text_area :content, cols: "30", rows: "20", class: "form-control" %>
   </div>
-  <%= f.submit yield(:submit), class: "btn btn-primary btn-block" %>
+  <%= f.submit yield(:submit), class: "btn btn-primary btn-block mt-4 mb-4" %>
 <% end %>

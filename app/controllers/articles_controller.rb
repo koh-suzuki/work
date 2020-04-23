@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :destroy, :update]
+  before_action :authenticate_user!
+  before_action :validate_user, only: [:show, :edit, :destroy, :update]
   def index
-    @articles = Article.order(created_at: :desc).paginate(page: params[:page], per_page: 3)
+    @articles = current_user.articles.order(created_at: :desc)
   end
   
   def show
@@ -13,6 +15,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(params_article)
+    @article.user_id = current_user.id
     if @article.save
       redirect_to articles_path, notice: "新規作成できました。"
     else
@@ -47,5 +50,11 @@ class ArticlesController < ApplicationController
     
     def params_article
       params.require(:article).permit(:title, :content)
+    end
+    
+    def validate_user
+      if @article.user != current_user
+        redirect_to root_path, alert: "自分の投稿ではありません"  
+      end
     end
 end

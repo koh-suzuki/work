@@ -12,7 +12,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'sqlite3'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 5.5'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
